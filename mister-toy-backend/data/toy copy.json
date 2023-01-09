@@ -1,0 +1,47 @@
+[
+    {
+        "_id": "101",
+        "name":" Talking doll",
+        "price" : 123,
+        "labels":["doll" , "Battery powered", "Baby"],
+        "msg" : "lorem ipsum dolor sit amet, consectetur",
+        "createdAt" : 1631031801011,
+        "inStock" : true
+    },
+    {
+        "_id": "102",
+        "name":" Smiling doll",
+        "price" : 143,
+        "labels":["Battery powered", "Baby"],
+        "msg" : "lorem ipsum dolor sit amet, consectetur",
+        "createdAt" : 1631031801011,
+        "inStock" : false
+    },
+    {
+        "_id": "103",
+        "name":" Singing doll",
+        "price" : 163,
+        "labels":["doll" , "Baby"],
+        "msg" : "lorem ipsum dolor sit amet, consectetur",
+        "createdAt" : 1631031801011,
+        "inStock" : false
+    },
+    {
+        "_id": "104",
+        "name":" Dancing doll",
+        "price" : 123,
+        "labels":["doll" , "Battery powered"],
+        "msg" : "lorem ipsum dolor sit amet, consectetur",
+        "createdAt" : 1631031801011,
+        "inStock" : true
+    },
+    {
+        "_id": "105",
+        "name":" Toy car",
+        "price" : 199,
+        "labels":["Battery powered"],
+        "msg" : "lorem ipsum dolor sit amet, consectetur",
+        "createdAt" : 1631031801011,
+        "inStock" : true
+    }
+]

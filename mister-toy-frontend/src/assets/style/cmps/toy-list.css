@@ -1,5 +1,6 @@
 .toy-list{
     grid-template-columns: repeat(auto-fit, minmax(290px , .5fr));
+    place-content: center;
     place-items: center;
     gap: 1rem;
     padding: 2rem 0;
