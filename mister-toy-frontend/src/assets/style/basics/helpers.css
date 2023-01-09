@@ -1,0 +1,28 @@
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.grid {
+    display: grid;
+}
+
+.main-layout :not(.full){
+    margin-left: 30px;
+    margin-right: 30px;
+}

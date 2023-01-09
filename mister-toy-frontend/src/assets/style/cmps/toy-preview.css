@@ -1,0 +1,11 @@
+.toy-preview{
+    display: flex;
+    flex-direction: column;
+    background-color: bisque;
+    /* justify-content: center; */
+    width: 295px;
+    height: 200px;
+    padding: 1rem;
+    gap: 2rem;
+    text-align: center;
+}

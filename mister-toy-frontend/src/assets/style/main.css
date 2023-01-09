@@ -1,4 +1,16 @@
-body{
-    box-sizing: border-box;
-    background-color: beige;
-}
+
+/* Setup */
+@import './setup/variables.css';
+
+/* Basics */
+@import './basics/base.css';
+@import './basics/forms.css';
+@import './basics/helpers.css';
+@import './basics/layout.css';
+
+/* cmps */
+@import './cmps/app-header.css';
+@import './cmps/toy-list.css';
+@import './cmps/toy-preview.css';
+@import './cmps/toy-filter.css';
+@import './cmps/toy-details.css';
