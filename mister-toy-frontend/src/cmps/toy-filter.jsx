@@ -34,9 +34,9 @@ export function ToyFilter({ onSetFilter }) {
 
             <select type="select" id="filter-label" name="labels" onChange={handleChange}>
                 <option value={''}>All</option>
-                <option value={'Doll'}>Doll</option>
-                <option value={'Battery powered'}>Battery powered</option>
-                <option value={'Baby'}>Baby</option>
+                <option value={'doll'}>Doll</option>
+                <option value={'battery powered'}>Battery powered</option>
+                <option value={'baby'}>Baby</option>
             </select>
 
             <label htmlFor="in-stock-filter">In stock:</label>

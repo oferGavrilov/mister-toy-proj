@@ -5,8 +5,8 @@
         "price": 123,
         "labels": [
             "doll",
-            "Battery powered",
-            "Baby"
+            "battery powered",
+            "baby"
         ],
         "msg": "lorem ipsum dolor sit amet, consectetur",
         "createdAt": 1631031801011,
@@ -17,8 +17,8 @@
         "name": " Smiling doll",
         "price": 143,
         "labels": [
-            "Battery powered",
-            "Baby"
+            "battery powered",
+            "baby"
         ],
         "msg": "lorem ipsum dolor sit amet, consectetur",
         "createdAt": 1631031801011,
@@ -30,7 +30,7 @@
         "price": 163,
         "labels": [
             "doll",
-            "Baby"
+            "baby"
         ],
         "msg": "lorem ipsum dolor sit amet, consectetur",
         "createdAt": 1631031801011,
@@ -42,7 +42,7 @@
         "price": 123,
         "labels": [
             "doll",
-            "Battery powered"
+            "battery powered"
         ],
         "msg": "lorem ipsum dolor sit amet, consectetur",
         "createdAt": 1631031801011,
@@ -53,7 +53,7 @@
         "name": "Toy controlled car",
         "price": 200,
         "labels": [
-            "Battery powered"
+            "battery powered"
         ],
         "msg": "lorem ipsum dolor sit amet, consectetur",
         "createdAt": 1631031801011,
@@ -63,7 +63,7 @@
         "name": " Toy plane ",
         "price": 250,
         "labels": [
-            "Battery powered"
+            "battery powered"
         ],
         "msg": "lorem ipsum dolor sit amet, consectetur",
         "createdAt": 1631031801011,
