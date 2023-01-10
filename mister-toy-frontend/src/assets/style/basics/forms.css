@@ -9,9 +9,9 @@ button {
 }
 
 button:hover {
-    background-color: rgb(241, 231, 220);
+    background-color: rgb(241, 220, 198);
     /* background-color: var(--clr2); */
-    color: white;
+    color: rgb(107, 89, 89);
     transition: .3s;
 }
 

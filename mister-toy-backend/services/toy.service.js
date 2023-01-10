@@ -4,7 +4,7 @@ var toys = require('../data/toy.json')
 
 module.exports = {
     query,
-    get,
+    getById,
     remove,
     save
 }
@@ -28,7 +28,7 @@ function query(filterBy) {
     return Promise.resolve(filteredToys)
 }
 
-function get(toyId) {
+function getById(toyId) {
     const toy = toys.find(toy => toy.id === toyId)
     if (!toy) return Promise.reject('Toy not found')
     return Promise.resolve(toy)

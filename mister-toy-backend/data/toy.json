@@ -1,73 +1,45 @@
 [
-    {
-        "_id": "101",
-        "name": " Talking doll",
-        "price": 123,
-        "labels": [
-            "doll",
-            "battery powered",
-            "baby"
-        ],
-        "msg": "lorem ipsum dolor sit amet, consectetur",
-        "createdAt": 1631031801011,
-        "inStock": true
-    },
-    {
-        "_id": "102",
-        "name": " Smiling doll",
-        "price": 143,
-        "labels": [
-            "battery powered",
-            "baby"
-        ],
-        "msg": "lorem ipsum dolor sit amet, consectetur",
-        "createdAt": 1631031801011,
-        "inStock": false
-    },
-    {
-        "_id": "103",
-        "name": " Singing doll",
-        "price": 163,
-        "labels": [
-            "doll",
-            "baby"
-        ],
-        "msg": "lorem ipsum dolor sit amet, consectetur",
-        "createdAt": 1631031801011,
-        "inStock": false
-    },
-    {
-        "_id": "104",
-        "name": " Dancing doll",
-        "price": 123,
-        "labels": [
-            "doll",
-            "battery powered"
-        ],
-        "msg": "lorem ipsum dolor sit amet, consectetur",
-        "createdAt": 1631031801011,
-        "inStock": true
-    },
-    {
-        "_id": "105",
-        "name": "Toy controlled car",
-        "price": 200,
-        "labels": [
-            "battery powered"
-        ],
-        "msg": "lorem ipsum dolor sit amet, consectetur",
-        "createdAt": 1631031801011,
-        "inStock": true
-    },
-    {
-        "name": " Toy plane ",
-        "price": 250,
-        "labels": [
-            "battery powered"
-        ],
-        "msg": "lorem ipsum dolor sit amet, consectetur",
-        "createdAt": 1631031801011,
-        "inStock": true,
-        "_id": "SgpK9"
-    }
+  {
+    "_id": "102",
+    "name": " Smiling doll",
+    "price": 150,
+    "labels": [
+      "battery powered",
+      "baby"
+    ],
+    "msg": "lorem ipsum dolor sit amet, consectetur",
+    "createdAt": 1631031801011,
+    "inStock": false
+  },
+  {
+    "_id": "104",
+    "name": " Dancing doll",
+    "price": 123,
+    "labels": [
+      "doll",
+      "battery powered"
+    ],
+    "msg": "lorem ipsum dolor sit amet, consectetur",
+    "createdAt": 1631031801011,
+    "inStock": true
+  },
+  {
+    "_id": "105",
+    "name": "Toy controlled car",
+    "price": 200,
+    "labels": [
+      "battery powered"
+    ],
+    "msg": "lorem ipsum dolor sit amet, consectetur",
+    "createdAt": 1631031801011,
+    "inStock": true
+  },
+  {
+    "name": "ofer",
+    "price": 63.66,
+    "type": "doll",
+    "inStock": true,
+    "createdAt": 1673357180619,
+    "_id": "vTzQH"
+  }
 ]

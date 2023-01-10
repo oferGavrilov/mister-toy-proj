@@ -28,8 +28,20 @@ app.get('/api/toy', (req, res) => {
         })
 })
 
+app.get('/api/toy/:id', (req, res) => {
+    const { toyId } = req.params.id
+    toyService.getById(toyId)
+        .then((toy) => {
+            res.send(toy)
+        })
+        .catch(err => {
+            console.log('Error: ', err)
+            res.status(400).send('Cannot get toy')
+        })
+})
+
 // Update
-app.put('/api/toy' , (req, res) => {
+app.put('/api/toy', (req, res) => {
     const toy = req.body
     toyService.save(toy)
         .then((savedToy) => {
@@ -55,23 +67,12 @@ app.post('/api/toy', (req, res) => {
 })
 
 // Read - Get By ID
-app.get('/api/toy/:toyId', (req, res) => {
-    const { toyId } = req.params
-    toyService.get(toyId)
-        .then((toy) => {
-            res.send(toy)
-        })
-        .catch(err => {
-            console.log('Error: ', err)
-            res.status(400).send('Cannot get toy')
-        })
-})
 
 app.delete('/api/toy/:toyId', (req, res) => {
     const { toyId } = req.params
     toyService.remove(toyId)
         .then(() => {
-            res.send({msg:'Car removed successfully' , toyId})
+            res.send({ msg: 'Car removed successfully', toyId })
         })
         .catch(err => {
             console.log('Error: ', err)

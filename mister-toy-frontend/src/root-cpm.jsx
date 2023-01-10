@@ -8,7 +8,8 @@ import { store } from './store/store';
 import { AppHeader } from './cmps/app-header';
 import { ToyIndex } from './pages/toy-index';
 import { ToyDetails } from './pages/toy-details';
-
+import { UserMsg} from'./cmps/user-msg'
+import { ToyEdit } from './pages/toy-edit';
 
 export function App() {
   return (
@@ -22,7 +23,10 @@ export function App() {
               <Route element={<About />} path="/about" />
               <Route element={<ToyIndex />} path="/toy" />
               <Route element={<ToyDetails />} path="/toy/details/:toyId" />
+              <Route element={<ToyEdit />} path="/toy/edit/" />
+              <Route element={<ToyEdit />} path="/toy/edit/:toyId" />
             </Routes>
+            <UserMsg />
           </main>
         </section>
       </Router>
