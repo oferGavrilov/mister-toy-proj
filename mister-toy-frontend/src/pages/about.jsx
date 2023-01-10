@@ -1,7 +1,9 @@
+import { GoogleMap } from "../cmps/google-map";
 export function About() {
-    return(
+    return (
         <section className="about">
-            <h2>Hello from about page!!</h2>
+
+            <GoogleMap />
         </section>
     )
 }

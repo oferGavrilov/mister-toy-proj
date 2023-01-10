@@ -1,0 +1,45 @@
+.toy-edit {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    width: 60%;
+    padding: 1rem;
+}
+
+.toy-edit>* {
+    margin-bottom: 1rem;
+}
+
+.save-btn {}
+
+.multi-select {
+    position: relative;
+}
+
+.multi-select .selected-options-container {
+    display: flex;
+    gap: 5px;
+}
+
+.multi-select .options-container {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 20px;
+}
+
+
+.multi-select .options-container.open {
+    display: unset;
+}
+
+
+.multi-select .options-container>* {
+    padding: 5px;
+    border: 1px solid black;
+    background: white;
+}
+.cancel-btn{
+    width: 100%;
+    margin: 0;
+}

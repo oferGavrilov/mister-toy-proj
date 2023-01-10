@@ -24,22 +24,55 @@
     "inStock": true
   },
   {
-    "_id": "105",
-    "name": "Toy controlled car",
-    "price": 200,
-    "labels": [
-      "battery powered"
-    ],
-    "msg": "lorem ipsum dolor sit amet, consectetur",
-    "createdAt": 1631031801011,
-    "inStock": true
+    "name": "ofer",
+    "price": "325",
+    "labels": [],
+    "inStock": true,
+    "createdAt": 1673380340485,
+    "_id": "bwPz1"
   },
   {
     "name": "ofer",
-    "price": 63.66,
-    "type": "doll",
+    "price": "1",
+    "labels": [
+      "Baby",
+      "Doll"
+    ],
     "inStock": true,
-    "createdAt": 1673357180619,
-    "_id": "vTzQH"
+    "createdAt": 1673381780056,
+    "_id": "REKmw"
+  },
+  {
+    "name": "",
+    "price": "",
+    "labels": [
+      "Baby",
+      "Doll"
+    ],
+    "inStock": true,
+    "createdAt": 1673382736872,
+    "_id": "vOktd"
+  },
+  {
+    "name": "",
+    "price": "",
+    "labels": [
+      "Baby"
+    ],
+    "inStock": true,
+    "createdAt": 1673382831547,
+    "_id": "63sk9"
+  },
+  {
+    "name": "ofer",
+    "price": "357",
+    "labels": [
+      "Battery Powered",
+      "Doll",
+      "Baby"
+    ],
+    "inStock": true,
+    "createdAt": 1673384512079,
+    "_id": "yD4Op"
   }
 ]

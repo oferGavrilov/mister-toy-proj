@@ -8,7 +8,8 @@ export const toyService = {
     getById,
     remove,
     save,
-    getEmptyToy
+    getEmptyToy,
+    getLabels
 }
 
 function query(filterBy = getDefaultFilter()) {
@@ -37,5 +38,9 @@ function getDefaultFilter() {
 }
 
 function getEmptyToy() {
-    return {name:'' , price:'' , type:'', inStock: true , createdAt: Date.now()}
+    return {name:'' , price:'' , labels:[], inStock: true , createdAt: Date.now()}
+}
+
+function getLabels() {
+    return [ "Baby", "Doll", "Battery Powered"]
 }
