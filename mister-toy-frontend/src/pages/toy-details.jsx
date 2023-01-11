@@ -25,13 +25,13 @@ export function ToyDetails() {
 
     if(!toy) return <div>Loading...</div>
     return (
-        <section className="toy-details">
+        <section className="toy-details flex column">
             <h1>{toy.name}</h1>
             <h3>Price: {toy.price}</h3>
             {/* <img src={require(`../assets/style/img/${toy.img}`)} alt="" /> */}
             <p>{toy.msg}</p>
             <h5 style={toy.inStock ? {color:'green'} : {color: 'red'}}>{toy.inStock ? 'Available' : 'Out of stock'}</h5>
-            <Link to={'/toy'}>Back</Link>
+            <Link to={'/toy'}><button className="toy-details btn-link">Back</button></Link>
         </section>
     )
 }

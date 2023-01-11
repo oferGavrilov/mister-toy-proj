@@ -1,12 +1,16 @@
-import { useEffect, useState } from "react"
-import { toyService } from "../services/toy.service"
+import { useEffect, useState ,useRef} from "react"
+import { useEffectUpdate } from "../customHooks/useEffectUpdate.js"
+import { toyService } from "../services/toy.service.js"
+import { utilService } from "../services/util.service.js"
 
-export function ToyFilter({ onSetFilter }) {
+export function ToyFilter({ onSetFilter , filterBy }) {
 
     const [filterByToEdit, setFilterByToEdit] = useState(toyService.getDefaultFilter())
 
-    useEffect(() => {
-        onSetFilter(filterByToEdit)
+    onSetFilter = useRef(utilService.debounce(onSetFilter))
+
+    useEffectUpdate(() => {
+        onSetFilter.current(filterByToEdit)
     }, [filterByToEdit])
 
     function handleChange({ target }) {
@@ -22,7 +26,7 @@ export function ToyFilter({ onSetFilter }) {
     }
 
     return (
-        <section className="toy-filter main-layout flex column align-center">
+        <section className="toy-filter flex column main-layout">
             <form >
                 <input type="text"
                     id="filter-name"
@@ -39,8 +43,8 @@ export function ToyFilter({ onSetFilter }) {
                 <option value={'baby'}>Baby</option>
             </select>
 
-            <label htmlFor="in-stock-filter">In stock:</label>
-            <input className="check-box" type="checkbox" id="in-stock-filter"
+            <label htmlFor="in-stock-filter" className="toy-filter check-box">In stock:</label>
+            <input className="toy-filter check-box-btn" type="checkbox" id="in-stock-filter"
                 name="inStock" value={filterByToEdit.inStock}  onChange={handleCheckBox} />
         </section>
     )

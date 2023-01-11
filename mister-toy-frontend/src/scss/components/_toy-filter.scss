@@ -1,0 +1,19 @@
+.toy-filter {
+    margin: rem(32px);
+    gap: rem(20px);
+    
+    &.check-box{
+        font-size: rem(20px);
+    }
+    &.check-box-btn{
+        margin-right: auto;
+    }
+    
+    >*{
+        margin :rem(8px);
+    }
+}
+#filter-name {
+    width: 100%;
+    padding: 10px;
+}

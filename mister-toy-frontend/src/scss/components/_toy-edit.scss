@@ -1,0 +1,16 @@
+.toy-edit {
+    margin: rem(32px) auto;
+    align-items: center;
+
+    .formik > * {
+        margin: 12px ;
+        &.error{
+            margin: 0;
+            text-align: center;
+        }
+    }
+    .labels-pick{
+        width: 100%;
+    }
+}
+

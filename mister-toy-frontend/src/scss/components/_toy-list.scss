@@ -1,0 +1,14 @@
+.toy-list {
+    grid-template-columns: repeat(auto-fill, minmax(290px , 1fr));
+    place-content: center;
+    place-items: center;
+    gap: rem(40px);
+    padding: rem(32px) 0;
+    font-size: large;
+}
+.add-btn{
+    display: flex;
+    margin: auto;
+    width: 80px;
+    text-align: center;
+}

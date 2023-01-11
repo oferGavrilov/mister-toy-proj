@@ -13,19 +13,18 @@ const SignupSchema = Yup.object().shape({
     name: Yup.string()
         .min(3, 'Too Short!')
         .required('Required'),
-    price: Yup.number()
+        price: Yup.string()
+        .min(1, 'Too Short!')
         .required('Required'),
     // labels: Yup.array()
     //     .required('Required')
 });
-
 
 const CustomTextField = (props) => {
     return <TextField id="outlined-basic" label={props.name} variant="outlined" {...props} />
 }
 
 export function ToyEdit() {
-
     const [toyToEdit, setToyToEdit] = useState(toyService.getEmptyToy())
     const navigate = useNavigate()
     const { toyId } = useParams()
@@ -35,8 +34,6 @@ export function ToyEdit() {
         toyService.getById(toyId)
             .then((toy) => setToyToEdit(toy))
     }, [])
-
-
 
     function onSetLabels(labels) {
         setToyToEdit({ ...toyToEdit, labels })
@@ -51,70 +48,39 @@ export function ToyEdit() {
             })
     }
 
-
-
     return (
-        <div>
-            <Formik
+        <div className="toy-edit flex column">
+            <Formik 
                 
                 initialValues={{
                     name: `${toyToEdit.name}` ,
-                    price: 0,
+                    price: '',
                     labels: []
                 }}
                 validationSchema={SignupSchema}
                 onSubmit={onSubmit} >
 
                 {({ errors, touched }) => (
-                    <Form className="formik">
-                        <Field as={CustomTextField} name="name" />
+                    <Form className="formik flex column">
+                        <Field as={CustomTextField} name="name" className="field" />
                         {errors.name && touched.name ? (
-                            <div>{errors.name}</div>
+                            <div className="formik error">{errors.name}</div>
                         ) : null}
-                        <Field as={CustomTextField} name="price" />
+                        <Field as={CustomTextField} name="price" className="field" />
                         {errors.price && touched.price ? (
-                            <div>{errors.price}</div>
+                            <div className="formik error">{errors.price}</div>
                         ) : null}
 
                         <Field as={MultiSelect} onSetLabels ={onSetLabels} name="labels" />
-                        {/* {errors.labels && touched.labels ? (
-                            <div>{errors.labels}</div>
-                        ) : null} */}
 
-                        <button type="submit">Submit</button>
+                        <button  className="btn-dark submit-btn" type="submit">Submit</button>
 
                     </Form>
                 )}
 
             </Formik>
-            <Link to={'/toy'}><button className="cancel-btn">Cancel</button></Link>
+            <Link to={'/toy'}><button className="btn-light cancel-btn">Cancel</button></Link>
         </div>
 
-
-
-        // <form className="toy-edit" onSubmit={onSubmit}>
-        //     <label htmlFor="name"></label>
-        //     <input type="text"
-        //         id="name"
-        //         name="name"
-        //         placeholder="Name..."
-        //         required
-        //         value={toyToEdit.name}
-        //         onChange={handleChange} />
-
-        //     <label htmlFor="price"></label>
-        //     <input type="number"
-        //         id="price"
-        //         required
-        //         name="price"
-        //         value={toyToEdit.price}
-        //         placeholder="Price..."
-        //         onChange={handleChange} />
-
-        //     <label htmlFor="labels"></label>
-        //     <MultiSelect onSetLabels={onSetLabels} />
-
-        //     <button className="save-btn">Save</button>
-        // </form>
     )
 }

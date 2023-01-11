@@ -1,22 +1,25 @@
 import { useEffect } from "react"
 import { useSelector } from "react-redux"
-import { NavLink } from "react-router-dom"
+import { NavLink, useSearchParams } from "react-router-dom"
 import { ToyFilter } from "../cmps/toy-filter"
 import { ToyList } from "../cmps/toy-list"
 import { showErrorMsg, showSuccessMsg } from "../services/event-bus.service"
+import { toyService } from "../services/toy.service"
 import { loadToys, removeToy, setFilter } from "../store/toy/toy.action"
 
 export function ToyIndex() {
     
     const toys = useSelector((storeState) => storeState.toyModule.toys)
-    const filterBy = useSelector((storeState) => storeState.toyModule.filterBy)
+    const [searchParams , setSearchParams] = useSearchParams()
+    const queryFilterBy = toyService.getFilterFromSearchParams(searchParams)
 
     useEffect(() => {
-        loadToys()
-    } , [filterBy])    
+        loadToys(queryFilterBy)
+    } ,[])    
     
-    function onSetFilter(filter) {
-        setFilter(filter)
+    function onSetFilter(filterBy) {
+        setSearchParams(filterBy)
+        loadToys(filterBy)
     }
 
     function onRemoveToy(toyId) {
@@ -30,8 +33,8 @@ export function ToyIndex() {
         
     return (
         <section className="toy-index">
-            <ToyFilter onSetFilter={onSetFilter} />
-            <NavLink to="/toy/edit" className="add-btn">Add toy</NavLink>
+            <ToyFilter onSetFilter={onSetFilter} filterBy={queryFilterBy} />
+            <NavLink to="/toy/edit" className=" btn-link add-btn">Add toy</NavLink>
             <ToyList toys={toys} onRemoveToy={onRemoveToy}/>
         </section>
     )

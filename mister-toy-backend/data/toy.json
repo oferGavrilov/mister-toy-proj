@@ -35,44 +35,33 @@
     "name": "ofer",
     "price": "1",
     "labels": [
-      "Baby",
-      "Doll"
+      "baby",
+      "doll"
     ],
     "inStock": true,
     "createdAt": 1673381780056,
     "_id": "REKmw"
   },
   {
-    "name": "",
-    "price": "",
-    "labels": [
-      "Baby",
-      "Doll"
-    ],
-    "inStock": true,
-    "createdAt": 1673382736872,
-    "_id": "vOktd"
-  },
-  {
-    "name": "",
-    "price": "",
-    "labels": [
-      "Baby"
-    ],
-    "inStock": true,
-    "createdAt": 1673382831547,
-    "_id": "63sk9"
-  },
-  {
     "name": "ofer",
     "price": "357",
     "labels": [
-      "Battery Powered",
-      "Doll",
-      "Baby"
+      "battery powered",
+      "doll",
+      "baby"
     ],
     "inStock": true,
     "createdAt": 1673384512079,
     "_id": "yD4Op"
+  },
+  {
+    "name": "ofer",
+    "price": "325",
+    "labels": [
+      "Baby"
+    ],
+    "inStock": true,
+    "createdAt": 1673463939002,
+    "_id": "Y1UKL"
   }
 ]

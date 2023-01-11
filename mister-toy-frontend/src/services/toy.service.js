@@ -9,7 +9,8 @@ export const toyService = {
     remove,
     save,
     getEmptyToy,
-    getLabels
+    getLabels,
+    getFilterFromSearchParams
 }
 
 function query(filterBy = getDefaultFilter()) {
@@ -43,4 +44,12 @@ function getEmptyToy() {
 
 function getLabels() {
     return [ "Baby", "Doll", "Battery Powered"]
+}
+function getFilterFromSearchParams(searchParams) {
+    const emptyFilter = getDefaultFilter()
+    const filterBy = {}
+    for (const field in emptyFilter) {
+        filterBy[field] = searchParams.get(field) || ''
+    }
+    return filterBy
 }

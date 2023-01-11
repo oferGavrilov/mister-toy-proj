@@ -2,9 +2,9 @@ import { SET_TOYS, SET_FILTER, REMOVE_TOY, UPDATE_TOY, ADD_TOY } from "./toy-red
 import { store } from "../store.js"
 import { toyService } from "../../services/toy.service.js"
 
-export function loadToys() {
+export function loadToys(filterBy) {
 
-    const { filterBy } = store.getState().toyModule
+    // const { filterBy } = store.getState().toyModule
     return toyService.query(filterBy)
         .then((toys) => {
             store.dispatch({ type: SET_TOYS, toys })
@@ -30,6 +30,6 @@ export function saveToy(toy) {
         .then((savedToy) => store.dispatch({ type, toy: savedToy }))
 }
 
-export function setFilter(filter) {
-    return Promise.resolve(store.dispatch({ type: SET_FILTER, filter }))
-}
+// export function setFilter(filter) {
+//     return Promise.resolve(store.dispatch({ type: SET_FILTER, filter }))
+// }

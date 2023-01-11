@@ -1,5 +1,3 @@
-import './assets/style/main.css'
-
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import { Home } from "./pages/home";
 import { About } from './pages/about';

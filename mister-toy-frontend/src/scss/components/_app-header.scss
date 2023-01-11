@@ -1,0 +1,15 @@
+.app-header {
+    background-color: $clr-main;
+    padding: rem(16px) 0;
+    align-items: center;
+
+    .logo{
+        margin: 0;
+    }
+    .main-nav > *{
+        padding: rem(8px) rem(16px);
+        border-radius: 8px;
+        margin: 0;
+    }
+
+}
